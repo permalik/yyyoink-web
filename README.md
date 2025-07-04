@@ -1,2 +1,2 @@
 # yyyoink-web
-application:Compression and Binary Toolkit Web Frontend
+application:Compression and Binary Toolkit Web
