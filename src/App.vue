@@ -21,11 +21,11 @@ function onSubmit(values) {
       yyyoink
     </div>
     <Form :validation-schema="textareaSchema" @submit="onSubmit" class="flex-col">
-      <div>
+      <div class="flex-col">
         <Field as="textarea" name="prompt" id="prompt" col="50" rows="10" class="w-92 bg-stone-700"/>
         <ErrorMessage name="prompt"/>
       </div>
-      <Button>Submit</Button>
+      <Button type="submit" label="Submit"/>
     </Form>
   </main>
 </template>
