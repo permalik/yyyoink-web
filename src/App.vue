@@ -6,10 +6,11 @@ import * as zod from "zod";
 
 const textareaSchema = toTypedSchema(
     zod.object({
-      body : zod.string().min(5, {message: "Prompt is required."}),
+      body: zod.string().min(5, {message: "Prompt is required."}),
     })
 );
 
+// TODO: impl environments (development, staging, production)
 async function createPrompt(payload) {
   const res = await fetch("http://localhost:5166/turn", {
     method: "POST",
@@ -26,7 +27,7 @@ async function createPrompt(payload) {
 async function onSubmit(values) {
   alert(JSON.stringify(values, null, 2));
   await createPrompt(values);
-}
+};
 </script>
 
 <template>
